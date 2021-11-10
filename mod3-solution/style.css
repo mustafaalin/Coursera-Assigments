@@ -1,191 +1,208 @@
-* {
-    box-sizing: border-box;
-  }
-  h1 {
-    font-size: 175%;
-    text-align: center;
-    margin-bottom: 20px;
-}
-  body {
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+  font-size: 16px;
+  color: #fff;
+  background-color: #fff;
+  font-family: 'Oxygen', sans-serif;
 }
 
-p{
-  background-color: gray;
-  padding: 40px 10px 5px 10px;
-  border: 2px solid black;
-  height: 150px;
-  margin-right: 10px;
+/** HEADER **/
+#header-nav {
+  background-color: #aaa;
+  border-radius: 0;
+  border: 0;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+}
+
+.navbar-brand h1 {
+  font-family: 'Lora', serif;
+  color: #000;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  text-align: center;
+}
+#nav-list a:hover {
+  background: #E7E7E7;
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
+
+/* END HEADER */
+
+/* HOME PAGE */
+.container .jumbotron {
+  box-shadow: 0 0 50px #3F0C1F;
+  border: 2px solid #3F0C1F;
+}
+
+#menu-tile, #specials-tile, #map-tile {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid #3F0C1F;
   overflow: hidden;
 }
-#container{
-  position: relative;
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
 }
-#beef{
-  background-color: hotpink;
-  position: absolute;
-  padding: 10px;
-  font-family: sans-serif;
-  top: 0;
-  right: 0;
-  font-weight: bold;
-  width: 120px;
-  height: 35px;
-  text-align: center;
+.content {
+  background-color: #aaa;
+  padding: 1px 0 0 0;
 }
-#sushi{
-  background-color: green;
-  position: absolute;
-  padding: 10px;
-  font-family: sans-serif;
-  top: 0;
-  right: 0;
-  font-weight: bold;
-  width: 120px;
-  height: 35px;
-  text-align: center;
+.content p {
+  margin: 15px 5px 15px 5px;
+  padding: 1px 10px 10px 10px;
 }
-#chicken{
-  background-color: khaki;
-  position: absolute;
-  padding: 10px;
-  font-family: sans-serif;
-  top: 0;
-  right: 0;
-  font-weight: bold;
-  width: 120px;
-  height: 35px;
-  text-align: center;
+.content h3 {
+  font-style: bold;
+}
+#menu-tile {
+  background: url('../images/menu-tile.jpg') no-repeat;
+  background-position: center;
+}
+#specials-tile {
+  background: url('../images/specials-tile.jpg') no-repeat;
+  background-position: center;
 }
 
-
-.row {
+#menu-tile span, #specials-tile span, #map-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+
+/* END HOME PAGE */
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  .container .jumbotron {
+    background: url('../images/jumbotron_1200.jpg') no-repeat;
+    height: 675px;
+  }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+  #logo-img {
+    background: url('../images/restaurant-logo_medium.png') no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 5px 5px 5px 0;
+  }
+  /* End Header */
+
+  /* Home Page */
+  .container .jumbotron {
+    background: url('../images/jumbotron_992.jpg') no-repeat;
+    height: 558px;
+  }
+  /* End Home Page */
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Home Page */
+  .container .jumbotron {
+    background: url('../images/jumbotron_768.jpg') no-repeat;
+    height: 432px;
+  }
+  /* End Home Page */
+
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+  .navbar-brand {
+    padding-top: 10px;
+    height: 80px;
+  }
+  .navbar-brand h1 { /* Restaurant name */
+    padding-top: 10px;
+    font-size: 5vw; /* 1vw = 1% of viewport width */
+  }
+  .navbar-brand p { /* Kosher cert */
+    font-size: .6em;
+    margin-top: 12px;
+  }
+  .navbar-brand p img { /* Star-K */
+    height: 20px;
+  }
+
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  #call-btn > a {
+    font-size: 1.5em;
+    display: block;
+    margin: 0 20px;
+    padding: 10px;
+    border: 2px solid #fff;
+    background-color: #f6b319;
+    color: #951c49;
+  }
+  #xs-deliver {
+    margin-top: 5px;
+    font-size: .7em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  /* End Header */
+
+  /* Home Page */
+  .container .jumbotron {
+    margin-top: 30px;
+    padding: 0;
+  }
+
+  #menu-tile, #specials-tile {
+    width: 360px;
+    margin: 0 auto 15px;
+  }
+
 }
 
 
-@media (min-width: 992px) {
-    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-        float: left;        
-      }
-      .col-md-1 {
-        width: 8.33%;
-      }
-      .col-md-2 {
-        width: 16.66%;
-      }
-      .col-md-3 {
-        width: 25%;
-      }
-      .col-md-4 {
-        width: 33.33%;
-      }
-      .col-md-5 {
-        width: 41.66%;
-      }
-      .col-md-6 {
-        width: 50%;
-      }
-      .col-md-7 {
-        width: 58.33%;
-      }
-      .col-md-8 {
-        width: 66.66%;
-      }
-      .col-md-9 {
-        width: 74.99%;
-      }
-      .col-md-10 {
-        width: 83.33%;
-      }
-      .col-md-11 {
-        width: 91.66%;
-      }
-      .col-md-12 {
-        width: 100%;
-      }
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+  /* Header */
+  .navbar-brand h1 { /* Restaurant name */
+    padding-top: 5px;
+    font-size: 6vw;
   }
-@media (min-width: 768px) and (max-width: 991px) {
-    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
-      float: left;      
-      }
-      .col-sm-1 {
-        width: 8.33%;
-      }
-      .col-sm-2 {
-        width: 16.66%;
-      }
-      .col-sm-3 {
-        width: 25%;
-      }
-      .col-sm-4 {
-        width: 33.33%;
-      }
-      .col-sm-5 {
-        width: 41.66%;
-      }
-      .col-sm-6 {
-        width: 50%;
-      }
-      .col-sm-7 {
-        width: 58.33%;
-      }
-      .col-sm-8 {
-        width: 66.66%;
-      }
-      .col-sm-9 {
-        width: 74.99%;
-      }
-      .col-sm-10 {
-        width: 83.33%;
-      }
-      .col-sm-11 {
-        width: 91.66%;
-      }
-      .col-sm-12 {
-        width: 100%;
-      }
+  /* End Header */
+  
+  /* Home page */
+  #menu-tile, #specials-tile {
+    width: 280px;
+    margin: 0 auto 15px;
   }
-  @media (max-width: 767px) {
-    .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
-      float: left;
-      }
-      .col-xs-1 {
-        width: 8.33%;
-      }
-      .col-xs-2 {
-        width: 16.66%;
-      }
-      .col-xs-3 {
-        width: 25%;
-      }
-      .col-xs-4 {
-        width: 33.33%;
-      }
-      .col-xs-5 {
-        width: 41.66%;
-      }
-      .col-xs-6 {
-        width: 50%;
-      }
-      .col-xs-7 {
-        width: 58.33%;
-      }
-      .col-xs-8 {
-        width: 66.66%;
-      }
-      .col-xs-9 {
-        width: 74.99%;
-      }
-      .col-xs-10 {
-        width: 83.33%;
-      }
-      .col-xs-11 {
-        width: 91.66%;
-      }
-      .col-xs-12 {
-        width: 100%;
-      }
-    
-  }
+}
+
